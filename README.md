@@ -12,8 +12,8 @@ Se recomienda probarlo en este entorno para que se ejecute automáticamente sin 
 Primero, debes dar permisos de ejecución al script e iniciarlo:
 
 ```bash
-chmod +x installBD.sh
-./installBD.sh
+chmod +x InstallBD.sh
+./InstallBD.sh
 ```
 
 Este script instalará automáticamente las siguientes herramientas y configuraciones:
@@ -34,7 +34,7 @@ Además, el script configurará y probará la base de datos **SQL Server** ejecu
 Al final del proceso, el script te pedirá reiniciar el equipo. Luego de reiniciar, vuelve a ejecutar:
 
 ```bash
-./installBD.sh
+./InstallBD.sh
 ```
 
 para completar la configuración.
