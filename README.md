@@ -39,6 +39,8 @@ Al final del proceso, el script te pedirá reiniciar el equipo. Luego de reinici
 
 para completar la configuración.
 
+En caso de haber problemas con las llaves de acceso a el sqlserver, volver a correr el installBD.sh
+
 ---
 
 ## Paso 2: Verificar que SQL Server esté funcionando en Docker
