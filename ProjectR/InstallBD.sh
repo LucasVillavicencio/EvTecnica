@@ -155,11 +155,25 @@ if groups "$USER" | grep -qv '\bdocker\b'; then
 else
 	echo "Usuario $USER ya pertenece al grupo docker"
 fi
-sudo docker start sqlserver
+
+#variables
+PASSW='Test!12345'
+CONT_NAME='sqlserver'
+
+# Verifica si el contenedor existe
+if ! sudo docker ps -a --format '{{.Names}}' | grep -q "^${CONT_NAME}$"; then
+	echo "El contenedor '$CONT_NAME' no existe. No se puede iniciar."
+else
+	sudo docker start sqlserver
+	echo "contenedor funcionando correctamente"
+fi
+
 #Instalar y arrancar sql server en docker
-if ! sudo docker ps | grep -q 'sqlserver'; then
+if ! sudo docker ps -a --format '{{.Names}}' | grep -q "^${CONT_NAME}$"; then
 	echo "Iniciando contenedor Docker de SQL Server"
 	sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=Test!12345' -p 1433:1433 --name sqlserver -d mcr.microsoft.com/mssql/server:2019-latest
+	sudo docker exec -it $CONT_NAME /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P $PASSW -Q "SELECT @@VERSION" -C -N	
+	sleep 90
 	
 else 
 	echo "Contenedor SQL Server ya corriendo"
@@ -168,11 +182,6 @@ fi
 echo "Finalizada la fase de configuracion de entorno"
 
 #Creacion de BD y tablas en la BD
-
-
-#variables
-PASSW='Test!12345'
-CONT_NAME='sqlserver'
 
 sudo docker exec -it sqlserver /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P 'Test!12345' -Q "SELECT @@VERSION" -C -N
 sudo docker exec $CONT_NAME /opt/mssql-tools18/bin/sqlcmd -S localhost -U SA -P $PASSW -Q "IF NOT EXISTS (SELECT name FROM sys.databases WHERE name = N'BaseDatosUno') 
