@@ -1,0 +1,9 @@
+Empleados:
+1 - Juan Pérez - Ingeniero
+2 - Anna Soto - Analista
+3 - Pedro Gonzalez - QA
+
+Departamentos:
+1 - TI
+2 - RRHH
+3 - Gerencia
