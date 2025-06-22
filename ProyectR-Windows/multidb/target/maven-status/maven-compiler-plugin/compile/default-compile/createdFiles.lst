@@ -1,0 +1,9 @@
+com\example\multidb\db2\entity\Departamento.class
+com\example\multidb\db1\repository\EmpleadoRepository.class
+com\example\multidb\db2\repository\DepartamentoRepository.class
+com\example\multidb\config\Db2Config.class
+com\example\multidb\db1\entity\Empleado.class
+com\example\multidb\MultidbApplication.class
+com\example\multidb\service\ExportService.class
+com\example\multidb\service\ScheduledExportService.class
+com\example\multidb\config\Db1Config.class

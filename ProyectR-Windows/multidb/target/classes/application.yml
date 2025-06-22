@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    db1:
+      url: jdbc:sqlserver://localhost:1433;databaseName=BaseDatosUno
+      username: SA
+      password: Test#12345
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    db2:
+      url: jdbc:sqlserver://localhost:1433;databaseName=BaseDatosDos
+      username: SA
+      password: Test#12345
+      driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+
+  jpa:
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
