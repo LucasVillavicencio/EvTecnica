@@ -31,6 +31,26 @@ Asegúrate de que Docker esté corriendo correctamente antes de continuar.
 
 ---
 
+### Requisito: Java instalado
+
+Este proyecto requiere tener **Java instalado** para poder ejecutar el archivo `.jar` que genera reportes automáticamente cada minuto.
+
+Si no tienes Java instalado, puedes descargar una versión gratuita y open-source desde Adoptium:
+
+[👉 https://adoptium.net/](https://adoptium.net/es/temurin/releases/?variant=openjdk17&jvmVariant=hotspot&os=any&arch=any&version=17)
+
+Se recomienda instalar la versión **Temurin 17 o superior**.
+
+
+Pasos:
+
+1. Descarga el instalador adecuado para tu sistema operativo.
+2. Durante la instalación, selecciona la opción que agrega Java al `PATH`.
+3. Verifica que Java esté correctamente instalado ejecutando en la terminal o PowerShell:
+   
+    ```powershell
+    java -version
+
 ## Instrucciones de ejecución
 
 1. Ejecutar el archivo `init.bat` **con permisos de administrador**.
