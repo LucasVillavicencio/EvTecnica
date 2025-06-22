@@ -1,6 +1,42 @@
 # EvTecnica
 
-# Instrucciones para ejecutar el código
+# ProyectoR - Instalación y Ejecución VERSION WINDOWS
+
+## Requisitos previos
+
+- Tener instalado **WSL (Windows Subsystem for Linux)**.  
+  En caso de no tenerlo, abre PowerShell y ejecuta:
+
+  ```powershell
+  wsl --install
+
+- Recordar **reiniciar el equipo** una vez finalizada la instalación de WSL.
+
+- Instalar **Docker Desktop** para Windows.  
+Asegúrate de que Docker esté corriendo correctamente antes de continuar.
+
+---
+
+## Instrucciones de ejecución
+
+1. Ejecutar el archivo `init.bat` **con permisos de administrador**.
+
+2. El script `init.bat` realizará toda la configuración necesaria y, al finalizar, ejecutará el archivo `.jar`.
+
+3. El `.jar` generará reportes en formato `.txt` cada minuto, ubicados en la carpeta correspondiente del proyecto.
+
+---
+
+## Notas
+
+- Asegúrate que Docker Desktop esté funcionando correctamente antes de ejecutar el script.
+
+
+
+
+-------------------------------------------------------------------
+
+# Instrucciones para ejecutar el código VERSION KALI LINUX
 
 Este código está pensado para un ambiente de trabajo en un sistema operativo **Kali Linux limpio recién instalado**.  
 Se recomienda probarlo en este entorno para que se ejecute automáticamente sin problemas, ya que de otro modo podrían requerirse configuraciones manuales adicionales.
