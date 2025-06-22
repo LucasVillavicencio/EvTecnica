@@ -18,7 +18,7 @@ goto :eof
 REM ----------------------------------------------------
 REM Inicio del proceso de instalacion de sqlserver en docker
 :INIT_SERVER
-	docker pull mcr.microsoft.com/mssql/server
+	docker pull mcr.microsoft.com/mssql/server:2019-latest
 	docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=%SA_PASSWORD%" -p 1433:1433 --name %CONT_NAME% -d mcr.microsoft.com/mssql/server:2019-latest
 	goto :eof
 
