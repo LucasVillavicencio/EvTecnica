@@ -12,6 +12,20 @@
 
 - Recordar **reiniciar el equipo** una vez finalizada la instalación de WSL.
 
+## En caso de fallo habilitar permisos de virtualizacion a traves de la bios o powershell
+
+- Para powershell usando los siguientes comandos
+  ```powershell
+  bcdedit /set hypervisorlaunchtype auto
+  dism /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+  dism /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+
+- Reiniciar y proceder a reinstalar
+
+  ```powershell
+  wsl --set-default-version 2
+  wsl --install -d Ubuntu
+  
 - Instalar **Docker Desktop** para Windows.  
 Asegúrate de que Docker esté corriendo correctamente antes de continuar.
 
